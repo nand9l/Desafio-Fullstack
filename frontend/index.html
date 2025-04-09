@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos e Categorias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1>Gerenciamento de Produtos e Categorias</h1>
+    </center>
+    
+    <div class="container">
+        <!-- Seção de Categorias -->
+        <div class="section">
+            <h2>Categorias</h2>
+            
+            <form id="categoryForm">
+                <input type="hidden" id="categoryId">
+                <input type="text" id="categoryName" placeholder="Nome da Categoria" required>
+                <input type="text" id="categoryDescription" placeholder="Descrição" required>
+                <button type="submit">Salvar Categoria</button>
+            </form>
+            
+            <table id="categoriesTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="categoriesList">
+                    <!-- Categorias serão carregadas aqui -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Seção de Produtos -->
+        <div class="section">
+            <h2>Produtos</h2>
+            
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                <input type="text" id="productName" placeholder="Nome do Produto" required>
+                <input type="number" id="productPrice" placeholder="Preço" step="0.01" required>
+                <input type="number" id="productQuantity" placeholder="Quantidade" required>
+                <select id="productCategory" required>
+                    <option value="">Selecione uma categoria</option>
+                    <!-- Categorias serão carregadas aqui -->
+                </select>
+                <button type="submit">Salvar Produto</button>
+            </form>
+            
+            <table id="productsTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Categoria</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="productsList">
+                    <!-- Produtos serão carregados aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/category.js"></script>
+    <script src="js/product.js"> </script>
+    <script src="js/config.js"> </script>
+    
+</body>
+</html>
